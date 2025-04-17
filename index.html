@@ -15,7 +15,7 @@
   </body>
   <script type="text/javascript">
     navigator.xr.isSessionSupported().then((res) => {
-      document.getElementsByClassName('isSessionSupported').textContent = `${res}`
+      document.getElementsByClassName('isSessionSupported')[0].textContent = `${res}`
     })
   </script>
 </html>
