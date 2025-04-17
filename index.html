@@ -4,5 +4,17 @@
   </head>
   <body>
     <h1>機能確認</h1>
+    <table>
+      <tbody>
+        <tr>
+          <th>isSessionSupported</th>
+          <td class="isSessionSupported"></td>
+        </tr>
+      </tbody>
+    </table>
   </body>
+  <script type="text/javascript">
+    const a = await navigator.xr.isSessionSupported()
+    document.getElementsByClassName('isSessionSupported').textContent = `${a}`
+  </script>
 </html>
