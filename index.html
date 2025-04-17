@@ -7,15 +7,15 @@
     <table>
       <tbody>
         <tr>
-          <th>isSessionSupported</th>
+          <th>navigator.xr.isSessionSupported('inline')</th>
           <td class="isSessionSupported"></td>
         </tr>
       </tbody>
     </table>
   </body>
   <script type="text/javascript">
-    navigator.xr.isSessionSupported().then((res) => {
-      document.getElementsByClassName('isSessionSupported')[0].textContent = `${res}`
+    navigator.xr.isSessionSupported('inline').then((res) => {
+      document.getElementsByClassName('isSessionSupported')[0].textContent = `${res}`;
     })
   </script>
 </html>
