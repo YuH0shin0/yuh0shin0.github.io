@@ -14,7 +14,8 @@
     </table>
   </body>
   <script type="text/javascript">
-    const a = await navigator.xr.isSessionSupported()
-    document.getElementsByClassName('isSessionSupported').textContent = `${a}`
+    navigator.xr.isSessionSupported().then((res) => {
+      document.getElementsByClassName('isSessionSupported').textContent = `${a}`
+    })
   </script>
 </html>
