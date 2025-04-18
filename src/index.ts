@@ -1,4 +1,4 @@
-import { Device } from "./device"
+import { Device } from "@/device"
 async function run() {
   const device = new Device()
   const status = await device.isXRSupported('inline')

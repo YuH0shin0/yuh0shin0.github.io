@@ -13,4 +13,27 @@ class Device {
         return status
     }
 }
-export {Device}
+
+/**
+ * テスト用の端末
+ * XRをサポートする
+ */
+class SupportedDevice {
+    constructor() {}
+    async isXRSupported(mode: XRMode = 'inline'): Promise<boolean> {
+        return await Promise.resolve(true)
+    }
+}
+
+/**
+ * テスト用の端末
+ * XRをサポートしない
+ */
+class NotSupportedDevice {
+    constructor() {}
+    async isXRSupported(mode: XRMode = 'inline'): Promise<boolean> {
+        return await Promise.resolve(false)
+    }
+}
+
+export {Device, SupportedDevice, NotSupportedDevice}
