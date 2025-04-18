@@ -10,7 +10,7 @@ declare namespace Global {
 /**
  * XRのモード
  * 
- * [W3C Reference](https://www.w3.org/TR/webxr/#xrsessionmode-enum
+ * [W3C Reference](https://www.w3.org/TR/webxr/#xrsessionmode-enum)
  */
 declare type XRMode = 'inline'
 
@@ -30,6 +30,7 @@ declare type WebXR = {
     readonly isSessionSupported: (mode: XRMode) => Promise<boolean>
   }
 }
+
 /**
  * 専用に拡張したNavigator
  */
