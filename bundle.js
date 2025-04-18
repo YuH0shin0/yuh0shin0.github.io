@@ -1,1 +1,1 @@
-"use strict";(()=>{var s=class{constructor(){}async isXRSupported(e="inline"){return await navigator.xr.isSessionSupported(e)}};async function n(){let e=await new s().isXRSupported("inline");document.getElementsByClassName("isSessionSupported")[0].textContent=`${e}`}n();})();
+"use strict";(()=>{var t=class{#t;constructor(){this.#t=navigator}async isXRSupported(n="inline"){return await this.#t.xr.isSessionSupported(n)}};async function o(){let s=await new t().isXRSupported();document.getElementsByClassName("isSessionSupported")[0].textContent=`${s}`}o();})();
