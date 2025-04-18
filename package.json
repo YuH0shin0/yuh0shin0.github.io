@@ -1,8 +1,8 @@
 {
   "scripts": {
-    "bundle": "./node_modules/@esbuild/darwin-arm64/bin/esbuild ./src/index.ts --bundle > bundle.js",
-    "minify": "./node_modules/@esbuild/darwin-arm64/bin/esbuild ./src/index.ts --bundle --minify > bundle.js",
-    "test": "./node_modules/playwright/cli.js test"
+    "bundle": "./node_modules/@esbuild/darwin-arm64/bin/esbuild ./src/index.ts --bundle --minify > bundle.js",
+    "test": "./node_modules/playwright/cli.js test",
+    "check": "./node_modules/typescript/bin/tsc"
   },
   "devDependencies": {
     "@esbuild/darwin-arm64": "^0.25.2",

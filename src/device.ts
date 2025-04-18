@@ -20,6 +20,7 @@ class Device {
  */
 class SupportedDevice {
     constructor() {}
+    // @ts-ignore
     async isXRSupported(mode: XRMode = 'inline'): Promise<boolean> {
         return await Promise.resolve(true)
     }
@@ -31,6 +32,7 @@ class SupportedDevice {
  */
 class NotSupportedDevice {
     constructor() {}
+    // @ts-ignore
     async isXRSupported(mode: XRMode = 'inline'): Promise<boolean> {
         return await Promise.resolve(false)
     }
