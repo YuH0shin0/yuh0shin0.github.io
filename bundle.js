@@ -1,0 +1,1 @@
+"use strict";(()=>{var t=class{constructor(){}async isXRSupported(s="inline"){return await navigator.xr.isSessionSupported(s)}};async function e(){let s=await new t().isXRSupported("inline");document.getElementsByClassName("isSessionSupported")[0].textContent=`${s}`}e();})();
