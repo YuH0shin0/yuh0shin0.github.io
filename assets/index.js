@@ -14,7 +14,9 @@ function getXRSupportStatus(mode) {
     });
 }
 function init() {
-    const status = getXRSupportStatus('inline');
-    document.getElementsByClassName('isSessionSupported')[0].textContent = `${status}`;
+    return __awaiter(this, void 0, void 0, function* () {
+        const status = yield getXRSupportStatus('inline');
+        document.getElementsByClassName('isSessionSupported')[0].textContent = `${status}`;
+    });
 }
 init();
