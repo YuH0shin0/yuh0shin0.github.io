@@ -1,4 +1,4 @@
-import { Device } from './device.cjs';
+import { Device } from './device.mjs';
 function init() {
     const device = new Device();
     device.isXRSupported().then((status) => {
