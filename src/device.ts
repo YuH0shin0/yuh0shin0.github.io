@@ -12,11 +12,11 @@ class Device implements IDevice {
      * [Reference W3C](https://www.w3.org/TR/webxr/#xrsessionmode-enum)
      */
     async isXRSupported(mode: XRMode = 'inline'): Promise<boolean> {
-        try {
+        if (this.#navigator.xr === undefined) {
+            return Promise.resolve(false)
+        } else {
             const status = await this.#navigator.xr.isSessionSupported(mode)
             return status
-        } catch (e) {
-            return Promise.resolve(false)
         }
     }
 }
