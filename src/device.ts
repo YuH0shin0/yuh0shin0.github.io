@@ -13,7 +13,7 @@ class Device implements IDevice {
      */
     async isXRSupported(mode: XRMode = 'inline'): Promise<boolean> {
         if (this.#navigator.xr === undefined) {
-            return Promise.resolve(false)
+            return await Promise.resolve(false)
         } else {
             const status = await this.#navigator.xr.isSessionSupported(mode)
             return status
