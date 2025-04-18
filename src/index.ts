@@ -1,4 +1,4 @@
-import {Device} from './device.mjs'
+import {Device} from './device'
 
 function init() {
   const device = new Device()
