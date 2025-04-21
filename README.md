@@ -1,6 +1,13 @@
 #### [機能確認画面(外部リンク)](yuh0shin0.github.io)
 
 #### package.json
+
+```
+ライブラリのインストール
+esbuildをCIにて利用するためパッケージのインストール時は以下のコマンドを利用する
+% npm install --save-dev --force
+```
+
 ```
 型宣言の確認
 
