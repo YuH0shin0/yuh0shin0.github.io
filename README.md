@@ -6,7 +6,7 @@
 
 % npm run check
 利用するライブラリ
-- typescript
+- [typescript](https://www.typescriptlang.org/)
 ```
 
 ```
@@ -14,7 +14,7 @@ src/*.tsをbundle.jsへ結合する
 
 % npm run bundle
 利用するライブラリ
-- @esbuild/darwin-arm64
+- [@esbuild/darwin-arm64](https://esbuild.github.io/)
 ```
 
 ```
@@ -22,6 +22,33 @@ src/*.tsをbundle.jsへ結合する
 
 % npm run test
 利用するライブラリ
-- @playwright/test
-- @types/node
+- [@playwright/test](https://playwright.dev/)
+- [@types/node](https://github.com/DefinitelyTyped/DefinitelyTyped)
 ```
+
+#### 参考文献
+
+- [W3C](https://www.w3.org/TR/)
+- [immersive-web.github.io](https://immersive-web.github.io/)
+- [MDN](https://developer.mozilla.org/)
+- [HTML Spec](https://html.spec.whatwg.org/)
+- [CSS Working Group Editor Drafts](https://drafts.csswg.org/)
+- [Datatracker](https://datatracker.ietf.org/doc/rfc9001/)
+
+### 要実装
+
+#### 利用時の流れ
+
+Here is a simple flow chart:
+
+```mermaid
+graph TD;
+    A-->B;
+    A-->C;
+    B-->D;
+    C-->D;
+```
+
+1. 起動
+2. 端末が対応しているか確認
+3. 
