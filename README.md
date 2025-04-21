@@ -21,7 +21,11 @@ src/*.tsをbundle.jsへ結合する
 
 % npm run bundle
 利用するライブラリ
+ローカル用
 - [@esbuild/darwin-arm64](https://esbuild.github.io/)
+
+CI用
+- [@esbuild/linux-x64](https://esbuild.github.io/)
 ```
 
 ```
