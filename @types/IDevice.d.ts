@@ -2,11 +2,12 @@
  * 端末
  */
 declare interface IDevice {
-  #navigator: AppNavigator
+  #navigator: App.Navigator
   /**
    * XRがサポートされている事
    * 
    * @param mode XRMode
    */
-  isXRSupported(mode: Required<XRMode> = 'inline'): Promise<boolean>
+  isXRSupported(mode: App.XRMode = 'inline'): Promise<boolean>
+  requestSession(mode: App.XRMode,requiredFeatures: string[]): Promise<any>
 }
