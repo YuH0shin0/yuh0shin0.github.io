@@ -6,4 +6,5 @@ declare namespace App {
    */
   declare type Navigator = ExperimentalNavigator & Global._Navigator
   declare type XRMode = Global._XRMode
+  declare type XRSession = Global._XRSession
 }

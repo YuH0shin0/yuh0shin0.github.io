@@ -16,4 +16,10 @@ declare namespace Global {
    * [W3C Reference](https://www.w3.org/TR/webxr/#xrsessionmode-enum)
    */
   declare type _XRMode = 'inline' | 'immersive-ar' | 'immersive-vr'
+
+
+  /**
+   * 未実装
+   */
+  declare type _XRSession = any
 }
