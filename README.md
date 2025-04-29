@@ -37,6 +37,19 @@ CI用
 - [@types/node](https://github.com/DefinitelyTyped/DefinitelyTyped)
 ```
 
+```
+ローカル環境にHTTPSを追加
+資料
+[web.dev](https://web.dev/articles/how-to-use-local-https)
+```
+
+```
+ローカル環境での開発
+% npm run start
+利用するライブラリ
+- [http-server](https://github.com/http-party/http-server)
+```
+
 #### 参考文献
 
 - [W3C](https://www.w3.org/TR/)

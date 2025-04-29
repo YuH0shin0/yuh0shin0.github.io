@@ -2,13 +2,15 @@
   "scripts": {
     "bundle": "./node_modules/typescript/bin/tsc && ./node_modules/@esbuild/darwin-arm64/bin/esbuild ./src/index.ts --bundle --minify > bundle.js",
     "test": "./node_modules/playwright/cli.js test",
-    "check": "./node_modules/typescript/bin/tsc"
+    "check": "./node_modules/typescript/bin/tsc",
+    "start": "http-server -S -C ./127.0.0.1.pem -K ./127.0.0.1-key.pem -p 3000 -a 127.0.0.1"
   },
   "devDependencies": {
     "@esbuild/darwin-arm64": "^0.25.2",
     "@esbuild/linux-x64": "^0.25.2",
     "@playwright/test": "^1.52.0",
     "@types/node": "^22.14.1",
+    "http-server": "^14.1.1",
     "typescript": "^5.8.3"
   }
 }
