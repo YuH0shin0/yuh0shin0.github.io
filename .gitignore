@@ -5,3 +5,7 @@ node_modules
 /playwright-report/
 /blob-report/
 /playwright/.cache/
+
+# pem
+127.0.0.1.pem
+127.0.0.1-key.pem
