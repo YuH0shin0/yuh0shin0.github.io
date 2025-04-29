@@ -9,5 +9,11 @@ declare interface IDevice {
    * @param mode XRMode
    */
   isXRSupported(mode: App.XRMode = 'inline'): Promise<boolean>
-  requestSession(mode: App.XRMode,requiredFeatures: string[]): Promise<any>
+
+  /**
+   * XRセッションの開始リクエストを作成する
+   * @param mode 
+   * @param requiredFeatures 
+   */
+  requestSession(mode: App.XRMode,requiredFeatures: string[]): Promise<App.XRSession>
 }

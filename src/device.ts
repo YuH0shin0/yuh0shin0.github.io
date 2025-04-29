@@ -6,7 +6,7 @@ class Device implements IDevice {
     constructor() {
         this.#navigator = navigator as unknown as App.Navigator
     }
-    requestSession(mode: App.XRMode, option: {} = {}): Promise<any> {
+    requestSession(mode: App.XRMode, option: {} = {}): Promise<boolean> {
         return this.#navigator.xr.requestSession(mode, option);
     }
     /**
@@ -14,7 +14,7 @@ class Device implements IDevice {
      *
      * [Reference W3C](https://www.w3.org/TR/webxr/#xrsessionmode-enum)
      */
-    async isXRSupported(mode: App.XRMode = 'inline'): Promise<boolean> {
+    async isXRSupported(mode: App.XRMode): Promise<boolean> {
         if (this.#navigator.xr === undefined) {
             return await Promise.resolve(false)
         } else {

@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "bundle": "./node_modules/@esbuild/darwin-arm64/bin/esbuild ./src/index.ts --bundle --minify > bundle.js",
+    "bundle": "./node_modules/typescript/bin/tsc && ./node_modules/@esbuild/darwin-arm64/bin/esbuild ./src/index.ts --bundle --minify > bundle.js",
     "test": "./node_modules/playwright/cli.js test",
     "check": "./node_modules/typescript/bin/tsc"
   },

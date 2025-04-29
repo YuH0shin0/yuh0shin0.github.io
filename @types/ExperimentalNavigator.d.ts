@@ -14,6 +14,6 @@ declare type ExperimentalNavigator = {
      * @returns Promise<boolean>
      */
     readonly isSessionSupported: (mode: Global._XRMode) => Promise<boolean>
-    readonly requestSession: (mode: Global._XRMode, optional: {}) => Promise<any>
+    readonly requestSession: (mode: Global._XRMode, optional: {}) => Promise<boolean>
   }
 }

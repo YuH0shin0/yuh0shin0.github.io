@@ -3,32 +3,27 @@
     <title>機能確認</title>
   </head>
   <body>
-    <h1>機能確認</h1>
     <table>
-      <tbody>
-        <tr>
-          <th>navigator.xr.isSessionSupported('inline')</th>
-          <td class="isSessionSupported inline">確認中</td>
-        </tr>
-        <tr>
-          <th>navigator.xr.isSessionSupported('immersive-ar')</th>
-          <td class="isSessionSupported immersive-ar">確認中</td>
-        </tr>
-        <tr>
-          <th>navigator.xr.isSessionSupported('immersive-vr')</th>
-          <td class="isSessionSupported immersive-vr">確認中</td>
-        </tr>
-      </tbody>
+      <tr>
+        <th>code</th>
+        <th>status</th>
+      </tr>
+      <tr>
+        <th>navigator.xr.isSessionSupported('inline')</th>
+        <td class="isSessionSupported inline">確認中</td>
+      </tr>
+      <tr>
+        <th>navigator.xr.isSessionSupported('immersive-ar')</th>
+        <td class="isSessionSupported immersive-ar">確認中</td>
+      </tr>
+      <tr>
+        <th>navigator.xr.isSessionSupported('immersive-vr')</th>
+        <td class="isSessionSupported immersive-vr">確認中</td>
+      </tr>
     </table>
+
     <button class="enter inline" type="button">requestSession("inline", {})</button>
     <span class="enter inline status"></span>
-    <br />
-    <button class="enter immersive-ar" type="button">requestSession("immersive-ar", {})</button>
-    <span class="enter immersive-ar status"></span>
-    <br />
-    <button class="enter immersive-ar depth-sensing" type="button">requestSession("immersive-ar", {requiredFeatures: ["depth-sensing"]})</button>
-    <span class="enter immersive-ar depth-sensing status"></span>
-    <br />
   </body>
   <script type="text/javascript" src="./bundle.js"></script>
 </html>
