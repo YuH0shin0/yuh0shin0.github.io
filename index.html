@@ -4,7 +4,7 @@
   </head>
   <body>
     <!-- allowはiframeのみ適用可 -->
-    <!-- <iframe id="root" allow="xr-spatial-tracking"></iframe> -->
+    <iframe id="root" allow="xr-spatial-tracking"></iframe>
 
     <!-- 確認する機能一覧 -->
     <table>
@@ -23,8 +23,12 @@
     </table>
 
     <!-- 開始ボタン -->
-    <p>
-      <button class="enter" type="button">enter</button>
+    <p class="enter">
+      <button class="viewer" type="button"></button>
+      <button class="local" type="button"></button>
+      <button class="local-floor" type="button"></button>
+      <button class="bounded-floor" type="button"></button>
+      <button class="unbounded" type="button"></button>
     </p>
     <p class="console-dom"></p>
   </body>
