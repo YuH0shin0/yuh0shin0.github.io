@@ -1,13 +1,11 @@
-"use strict";(()=>{var i=window.document;var t=window.navigator;var s=new Map;s.set("inline",null);s.set("immersive-ar",null);s.set("immersive-vr",null);async function m(){let e=i.getElementsByClassName("console-dom").item(0);e.textContent+=`
+"use strict";(()=>{var t=window.document;var e=window.navigator;var n=new Map;n.set("inline",null);n.set("immersive-ar",null);n.set("immersive-vr",null);async function m(){let i=t.getElementsByClassName("console-dom").item(0);i.textContent+=`
   \u6A5F\u80FD\u78BA\u8A8D
-  `;let n=await t.xr.isSessionSupported("inline");e.textContent+=`
-  navigator.xr.isSessionSupported('inline') = ${n}
-  `;let r=await t.xr.isSessionSupported("immersive-ar");e.textContent+=`
+  `;let s=await e.xr.isSessionSupported("inline");i.textContent+=`
+  navigator.xr.isSessionSupported('inline') = ${s}
+  `;let r=await e.xr.isSessionSupported("immersive-ar");i.textContent+=`
   navigator.xr.isSessionSupported('immersive-ar') = ${r}
-  `;let o=await t.xr.isSessionSupported("immersive-vr");e.textContent+=`
+  `;let o=await e.xr.isSessionSupported("immersive-vr");i.textContent+=`
   navigator.xr.isSessionSupported('immersive-vr') = ${o}
-  `;let a=i.featurePolicy.allowsFeature("xr-spatial-tracking","https://yuh0shin0.github.io/");e.textContent+=`
-  xr-spatial-tracking = ${a}
-  `,i.getElementsByClassName("enter").item(0).addEventListener("click",async u=>{if(!u.isTrusted)return;let l=await t.xr.requestSession("immersive-ar",{requiredFeatures:["viewer"],optionalFeatures:[]});e.textContent+=`
-    ${l.enabledFeatures}
+  `,t.getElementsByClassName("enter").item(0).addEventListener("click",async a=>{if(!a.isTrusted)return;let u=await e.xr.requestSession("immersive-ar",{requiredFeatures:["depth-sensing"],depthSensing:{usagePreference:["cpu-optimized","gpu-optimized"],dataFormatPreference:["luminance-alpha","float32"]}});i.textContent+=`
+    ${u.enabledFeatures}
     `})}m();})();
