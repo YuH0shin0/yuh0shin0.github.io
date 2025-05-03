@@ -1,1 +1,21 @@
-"use strict";(()=>{var o=class{#e;constructor(){this.#e=navigator}requestSession(e,t={}){return this.#e.xr.requestSession(e,t)}async isXRSupported(e){return this.#e.xr===void 0?await Promise.resolve(!1):await this.#e.xr.isSessionSupported(e)}};var r=class{eventId;source;constructor(e,t){this.source=e,this.eventId=t}dispatchEvent(e){this.source.dispatchEvent(e)}};var n=class extends r{constructor(e,t){super(e,t),e.addEventListener(t,s=>{let{detail:a}=s;e.textContent=`${a}`})}async response(e){try{let t=await e,s=new CustomEvent(this.eventId,{detail:t});this.dispatchEvent(s)}catch(t){let s=new CustomEvent(this.eventId,{detail:t});this.dispatchEvent(s)}}};async function c(){let i=new o,e=document.getElementsByClassName("isSessionSupported inline")[0];await new n(e,"inline").response(i.isXRSupported("inline"));let s=document.getElementsByClassName("isSessionSupported immersive-ar")[0];await new n(s,"immersive-ar").response(i.isXRSupported("immersive-ar"));let m=document.getElementsByClassName("isSessionSupported immersive-vr")[0];await new n(m,"immersive-vr").response(i.isXRSupported("immersive-vr"))}c();})();
+"use strict";(()=>{var s=window.document;var n=window.navigator;function m(r){return!!r.featurePolicy.allowsFeature("xr-spatial-tracking","https://127.0.0.1:3000")}var o=new Map;o.set("inline",null);o.set("immersive-ar",null);o.set("immersive-vr",null);async function c(){let r=s.getElementById("root"),e=s.getElementsByClassName("console-dom").item(0);e.textContent+=`
+  \u6A5F\u80FD\u78BA\u8A8D
+  `,e.textContent+=`
+  xr-spatial-tracking = ${m(r)}
+  `;let a=await n.xr.isSessionSupported("inline");e.textContent+=`
+  navigator.xr.isSessionSupported('inline') = ${a}
+  `;let u=await n.xr.isSessionSupported("immersive-ar");e.textContent+=`
+  navigator.xr.isSessionSupported('immersive-ar') = ${u}
+  `;let l=await n.xr.isSessionSupported("immersive-vr");e.textContent+=`
+  navigator.xr.isSessionSupported('immersive-vr') = ${l}
+  `,s.getElementsByClassName("enter inline").item(0).addEventListener("click",async i=>{if(i.isTrusted)try{let t=await n.xr.requestSession("inline",{requiredFeatures:["unbounded"],optionalFeatures:[]});e.textContent+=`
+      ${JSON.stringify(t)}
+      `}catch(t){e.textContent+=`
+      ${JSON.stringify(t)}`}}),s.getElementsByClassName("enter ar").item(0).addEventListener("click",async i=>{if(i.isTrusted)try{let t=await n.xr.requestSession("immersive-ar",{requiredFeatures:["unbounded"],optionalFeatures:[]});e.textContent+=`
+      ${JSON.stringify(t)}
+      `}catch(t){e.textContent+=`
+      ${JSON.stringify(t)}`}}),s.getElementsByClassName("enter vr").item(0).addEventListener("click",async i=>{if(i.isTrusted)try{let t=await n.xr.requestSession("immersive-vr",{requiredFeatures:["unbounded"],optionalFeatures:[]});e.textContent+=`
+      ${JSON.stringify(t)}
+      `}catch(t){e.textContent+=`
+      ${JSON.stringify(t)}
+      `}})}c();})();

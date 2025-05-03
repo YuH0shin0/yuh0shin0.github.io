@@ -1,8 +1,12 @@
-<html>
+<!doctype html>
   <head>
     <title>機能確認</title>
   </head>
   <body>
+    <!-- allowはiframeのみ適用可 -->
+    <iframe id="root" allow="xr-spatial-tracking"></iframe>
+
+    <!-- 確認する機能一覧 -->
     <table>
       <tr>
         <th>code</th>
@@ -22,8 +26,17 @@
       </tr>
     </table>
 
-    <button class="enter inline" type="button">requestSession("inline", {})</button>
-    <span class="enter inline status"></span>
+    <!-- 開始ボタン -->
+    <p>
+      <button class="enter inline" type="button">enter inline</button>
+    </p>
+    <p>
+      <button class="enter ar" type="button">enter ar</button>
+    </p>
+    <p>
+      <button class="enter vr" type="button">enter vr</button>
+    </p>
+    <p class="console-dom"></p>
   </body>
   <script type="text/javascript" src="./bundle.js"></script>
 </html>
