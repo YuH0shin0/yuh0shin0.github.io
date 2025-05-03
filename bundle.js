@@ -8,6 +8,6 @@
   navigator.xr.isSessionSupported('immersive-ar') = ${o}
   `;let a=await t.xr.isSessionSupported("immersive-vr");e.textContent+=`
   navigator.xr.isSessionSupported('immersive-vr') = ${a}
-  `,s.getElementsByClassName("enter ar").item(0).addEventListener("click",async u=>{if(!u.isTrusted)return;let m=await t.xr.requestSession("immersive-ar",{requiredFeatures:["viewer"],optionalFeatures:[]});e.textContent+=`
+  `,s.getElementsByClassName("enter").item(0).addEventListener("click",async u=>{if(!u.isTrusted)return;let m=await t.xr.requestSession("immersive-ar",{requiredFeatures:["viewer"],optionalFeatures:[]});e.textContent+=`
     ${m.enabledFeatures}
     `})}c();})();
