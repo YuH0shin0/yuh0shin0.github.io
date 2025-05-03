@@ -4,42 +4,13 @@
   </head>
   <body>
     <!-- allowはiframeのみ適用可 -->
-    <iframe id="root" allow="xr-spatial-tracking"></iframe>
+    <!-- <iframe id="root" allow="xr-spatial-tracking"></iframe> -->
 
-    <!-- 確認する機能一覧 -->
-    <table>
-      <tr>
-        <th>code</th>
-        <th>status</th>
-      </tr>
-      <tr>
-        <th>navigator.xr.isSessionSupported('inline')</th>
-        <td class="isSessionSupported inline">確認中</td>
-      </tr>
-      <tr>
-        <th>navigator.xr.isSessionSupported('immersive-ar')</th>
-        <td class="isSessionSupported immersive-ar">確認中</td>
-      </tr>
-    </table>
-
-    <!-- 開始ボタン -->
+    <!-- 開始ボタン = immersive-ar + ar-module + depth-sensing-module + hand-input-module + body-tracking-module -->
     <p class="enter">
-      <button class="viewer" type="button"></button>
-      <button class="local" type="button"></button>
-      <button class="local-floor" type="button"></button>
-      <button class="bounded-floor" type="button"></button>
       <button class="unbounded" type="button"></button>
     </p>
 
-    <!-- WebXR AR Module -->
-    <p class="ar-module">
-      <button class="secondary-views" type="button"></button>
-    </p>
-
-    <!-- WebXR Depth Sensing Module -->
-    <p class="depth-sensing-module">
-      <button class="depth-sensing" type="button"></button>
-    </p>
     <p class="console-dom"></p>
   </body>
   <script type="text/javascript" src="./bundle.js"></script>
