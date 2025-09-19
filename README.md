@@ -1,56 +1,55 @@
-#### [機能確認画面(外部リンク)](https://yuh0shin0.github.io)
+#### [Confirmation Screen(Eternal Link)](https://yuh0shin0.github.io)
 
 #### package.json
 
 ```
-ライブラリのインストール
-esbuildをCIにて利用するためパッケージのインストール時は以下のコマンドを利用する
+Installing dependencies
+Use a command below when installing dependencies to use esbuild on Continuous Integration Server
 % npm install --save-dev --force
 ```
 
 ```
-型宣言の確認
-
+Type Definition
 % npm run check
-利用するライブラリ
+Dependencies
 - [typescript](https://www.typescriptlang.org/)
 ```
 
 ```
-src/*.tsをbundle.jsへ結合する
+Combine all src/*.ts to single bundle.js
 
 % npm run bundle
-利用するライブラリ
-ローカル用
+Dependencies
+Local
 - [@esbuild/darwin-arm64](https://esbuild.github.io/)
 
-CI用
+Continuous Integration Server
 - [@esbuild/linux-x64](https://esbuild.github.io/)
 ```
 
 ```
-テスト
+Test
 
 % npm run test
-利用するライブラリ
+Dependencies
 - [@playwright/test](https://playwright.dev/)
 - [@types/node](https://github.com/DefinitelyTyped/DefinitelyTyped)
 ```
 
 ```
-ローカル環境にHTTPSを追加
-資料
+Add https protocol to local development environment
+Reference
 [web.dev](https://web.dev/articles/how-to-use-local-https)
 ```
 
 ```
-ローカル環境での開発
+Development in local environment
 % npm run start
-利用するライブラリ
+Dependencies
 - [http-server](https://github.com/http-party/http-server)
 ```
 
-#### 参考文献
+#### Reference
 
 - [W3C](https://www.w3.org/TR/)
 - [immersive-web.github.io](https://immersive-web.github.io/)
