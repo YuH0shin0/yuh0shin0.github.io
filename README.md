@@ -1,4 +1,7 @@
-#### [Confirmation Screen(Eternal Link)](https://yuh0shin0.github.io)
+#### Confirmation Screen
+```
+[Eternal Link](https://yuh0shin0.github.io)
+```
 
 #### package.json
 
@@ -50,10 +53,11 @@ Dependencies
 ```
 
 #### Reference
-
+```
 - [W3C](https://www.w3.org/TR/)
 - [immersive-web.github.io](https://immersive-web.github.io/)
 - [MDN](https://developer.mozilla.org/)
 - [HTML Spec](https://html.spec.whatwg.org/)
 - [CSS Working Group Editor Drafts](https://drafts.csswg.org/)
 - [Datatracker](https://datatracker.ietf.org/doc/rfc9001/)
+```
